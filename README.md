@@ -44,7 +44,7 @@ A figura abaixo ilustra a montagem em na protoboard dos componentes.
 ```bash
 # Fork usando a linha de comando oficial do GitHub, caso você não tenha a CLI do GitHub, use o site para fazer isso.
 
-$ gh repo fork georgaugusto/solouchuva-hardware
+$ gh repo fork georgaugusto/pomodoroArduino
 ```
 
 Depois que sua solicitação pull for merged, você pode excluir seu branch
