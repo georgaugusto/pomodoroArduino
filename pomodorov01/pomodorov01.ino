@@ -20,10 +20,6 @@
 #define tempoDescanso 300  // Define o tempo do contador (em segundos)
 #define tempoDescansoMaior 1200  // Define o tempo do contador (em segundos)
 
-//#define tempoContador 20  // Define o tempo do contador (em segundos)
-//#define tempoDescanso 5  // Define o tempo do contador (em segundos)
-//#define tempoDescansoMaior 12  // Define o tempo do contador (em segundos)
-
 // -------- Configurações do LCD --------
 #include <LiquidCrystal_I2C.h>  // Carrega a biblioteca LiquidCrystal
 
@@ -63,15 +59,6 @@ void setup() {
 }
 
 void loop() {
-  if (contadorStatus == 1) {
-        analogWrite(amarelo, LOW);
-        digitalWrite(verde, HIGH);
-        digitalWrite(vermelho, LOW);
-  } else {
-        analogWrite(amarelo, LOW);
-        analogWrite(verde, LOW);
-        analogWrite(vermelho, HIGH);
-  }
   byte estadoBotaoStart = pinBotaoStartApertado();
   if (estadoBotaoStart == 1) {
     if (tempo > 0) {
@@ -80,17 +67,26 @@ void loop() {
           contador = tempo;
         }
         // Inicia o contador novamente
+        digitalWrite(verde, LOW);
+        digitalWrite(amarelo, LOW);
+        digitalWrite(vermelho, HIGH);
         Timer1.start();
         Timer1.attachInterrupt(contaTempo);
         contadorStatus = 1;
       } else {
         // Para o contador
+        digitalWrite(verde, LOW);
+        digitalWrite(amarelo, HIGH);
+        digitalWrite(vermelho, LOW);
         Timer1.stop();
         contadorStatus = 0;
       }
     }
   }
   if ( estadoBotaoStart == 2 ) {
+    digitalWrite(verde, LOW);
+    digitalWrite(amarelo, HIGH);
+    digitalWrite(vermelho, LOW);
     if (tempo > 0) {
       Timer1.stop();
       contadorStatus = 0;  
@@ -183,16 +179,18 @@ void contaTempo() {
   if (contadorStatus == 1) {
     contador--;
     if (contador < 0) {
+      digitalWrite(verde, LOW);
+      digitalWrite(amarelo, LOW);
+      digitalWrite(vermelho, HIGH);
       if (cicloContador % 2 == 0) {
-        analogWrite(amarelo, HIGH);
-        analogWrite(verde, LOW);
-        analogWrite(vermelho, LOW);
+        digitalWrite(verde, HIGH);
+        digitalWrite(amarelo, LOW);
+        digitalWrite(vermelho, LOW);
         contador = tempoDescanso;
         if (cicloContador % 8 == 0 && cicloContador != 0) {
           contador = tempoDescansoMaior;
         }
       } else {
-
         contador = tempoContador;
         cicloTela++;
       }
