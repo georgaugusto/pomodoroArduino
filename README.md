@@ -36,3 +36,23 @@
 A figura abaixo ilustra a montagem em na protoboard dos componentes.
 
 ![picture](https://github.com/georgaugusto/pomodoroArduino/blob/main/public/Pomodoro_bb.png)
+
+## Como contribuir
+
+**Faça um fork deste repositório**
+
+```bash
+# Fork usando a linha de comando oficial do GitHub, caso você não tenha a CLI do GitHub, use o site para fazer isso.
+
+$ gh repo fork georgaugusto/solouchuva-hardware
+```
+
+Depois que sua solicitação pull for merged, você pode excluir seu branch
+
+## Licença
+
+Este projeto está licenciado sob a Licença MIT - consulte a [LICENSE](LICENSE) arquivo para obter detalhes.
+
+---
+
+Feito com 💜 &nbsp;por Georg Augusto Schlegel 👋 &nbsp;[Mande um Alô](https://www.linkedin.com/in/georgaugusto/)
