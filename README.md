@@ -19,8 +19,9 @@
 **Componentes:**
 * Arduino UNO
 * Protobord
-* Display LCD
+* Display LCD (No projeto utilizamos um LCD 16X2 Interface I2C)
 * 3 Leds
+* 3 Resistor 220 Ohms
 * Botão
 
 **Siga os passos abaixo**
