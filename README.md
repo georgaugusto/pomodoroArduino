@@ -1,6 +1,7 @@
 <p align="center">
   <a href="#Descrição">Descrição</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
   <a href="#Requisitos">Requisitos</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+  <a href="#Video-preview"Video preview</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
   <a href="#Como-contribuir">Como contribuir</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 </p>
 
@@ -36,6 +37,10 @@
 A figura abaixo ilustra a montagem em na protoboard dos componentes.
 
 ![picture](https://github.com/georgaugusto/pomodoroArduino/blob/main/public/Pomodoro_bb.png)
+
+## Video preview
+![Video](https://github.com/georgaugusto/pomodoroArduino/blob/main/public/gif.gif)
+
 
 ## Como contribuir
 
